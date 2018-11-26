@@ -1,0 +1,6 @@
+﻿{
+	"mongodb" : "mongodb://localhost/lpl",
+	"cookie" : {
+		"secure" : false
+	}
+}

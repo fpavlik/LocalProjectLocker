@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    h1 Choose your account or create new
+    form(action="newAuthor", method="get")
+        label(for="name")
+            input#name(type="text", name="newAuthor")
+        input(type="submit", value="Create")
+    br
+    if authors
+        each author in authors
+            a(href="author="+author, title="title")
+                h2 #{author}
+                 
+        

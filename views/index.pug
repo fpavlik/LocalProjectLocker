@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  p #{about}
+
+  form(action="go", method="get")
+    input(type="submit", value="Let's lock")
+  br
+  a(href="https://money.yandex.ru/to/410012175755685") Tip fpavlik (It's me)

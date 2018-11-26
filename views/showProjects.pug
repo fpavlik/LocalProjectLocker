@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    a(href="go", title="title") Back 
+    br
+    h1 Choose your project or create new
+    form(action="?newProject", method="get")
+        label(for="name")
+            input#name(type="text", name="newProject")
+        input(type="submit", value="Create")
+    br
+    if projects
+        each project in projects
+            a(href="project="+project, title="title")
+                h2 #{project}        
