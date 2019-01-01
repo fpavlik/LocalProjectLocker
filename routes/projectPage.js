@@ -5,7 +5,6 @@ var projectPage = (req, res, next) => {
     DbClass.findProject(projectName)
     .then((result, err) => {
         if (err) console.log("​projectPage -> err", err);
-        console.log("​projectPage -> result", result);
         res.render('projectPage', {project: result});
         
     })

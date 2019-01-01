@@ -1,0 +1,37 @@
+if (project.types.hosting != '')
+    h3 Hosting
+    each hosting in project.types.hosting
+        form(action="changeProject", method="post")
+            input(type="hidden", name="type", value="hosting")
+            input(type="hidden", name="authorName", value=project.authorName)
+            input(type="hidden", name="projectName", value=project.projectName)
+            label(for="hosting-login") Login
+                input#hosting-login(type="text", name="hosting-login", value=hosting.login)
+            br
+            label(for="hosting-password") Password
+                input#hosting-password(type="text", name="hosting-password", value=hosting.password)
+            br
+            label(for="hosting-address") address
+                input#hosting-address(type="text", name="hosting-address", value=hosting.address)
+            br
+            label(for="hosting-note") Note
+                input#hosting-note(type="text", name="hosting-note", value=hosting.note)
+            input(type="submit", value="UPD")
+else
+    h3 Hosting
+    form(action="changeProject", method="post")
+        input(type="hidden", name="type", value="hosting")
+        input(type="hidden", name="authorName", value=project.authorName)
+        input(type="hidden", name="projectName", value=project.projectName)
+        label(for="hosting-login") Login
+            input#hosting-login(type="text", name="hosting-login")
+        br
+        label(for="hosting-password") Password
+            input#hosting-password(type="text", name="hosting-password")
+        br
+        label(for="hosting-address") address
+            input#hosting-address(type="text", name="hosting-address")
+        br
+        label(for="hosting-note") Note
+            input#hosting-note(type="text", name="hosting-note")
+        input(type="submit", value="UPD")    

@@ -1,0 +1,37 @@
+if (project.types.other != '')
+    h3 other
+    each other in project.types.other
+        form(action="changeProject", method="post")
+            input(type="hidden", name="type", value="other")
+            input(type="hidden", name="authorName", value=project.authorName)
+            input(type="hidden", name="projectName", value=project.projectName)
+            label(for="other-login") Login
+                input#other-login(type="text", name="other-login", value=other.login)
+            br
+            label(for="other-password") Password
+                input#other-password(type="text", name="other-password", value=other.password)
+            br
+            label(for="other-title") title
+                input#other-title(type="text", name="other-title", value=other.title)
+            br
+            label(for="other-note") Note
+                input#other-note(type="text", name="other-note", value=other.note)
+            input(type="submit", value="UPD")
+else
+    h3 other
+    form(action="changeProject", method="post")
+        input(type="hidden", name="type", value="other")
+        input(type="hidden", name="authorName", value=project.authorName)
+        input(type="hidden", name="projectName", value=project.projectName)
+        label(for="other-login") Login
+            input#other-login(type="text", name="other-login")
+        br
+        label(for="other-password") Password
+            input#other-password(type="text", name="other-password")
+        br
+        label(for="other-title") title
+            input#other-title(type="text", name="other-title")
+        br
+        label(for="other-note") Note
+            input#other-note(type="text", name="other-note")
+        input(type="submit", value="UPD")    

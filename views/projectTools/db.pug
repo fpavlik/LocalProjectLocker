@@ -1,0 +1,37 @@
+if (project.types.db != '')
+    h3 DB
+    each db in project.types.db
+        form(action="changeProject", method="post")
+            input(type="hidden", name="type", value="db")
+            input(type="hidden", name="authorName", value=project.authorName)
+            input(type="hidden", name="projectName", value=project.projectName)
+            label(for="db-login") Login
+                input#db-login(type="text", name="db-login", value=db.login)
+            br
+            label(for="db-password") Password
+                input#db-password(type="text", name="db-password", value=db.password)
+            br
+            label(for="db-port") Port
+                input#db-port(type="text", name="db-port", value=db.port)
+            br
+            label(for="db-note") Note
+                input#db-note(type="text", name="db-note", value=db.note)
+            input(type="submit", value="UPD")
+else
+    h3 DB
+    form(action="changeProject", method="post")
+        input(type="hidden", name="type", value="db")
+        input(type="hidden", name="authorName", value=project.authorName)
+        input(type="hidden", name="projectName", value=project.projectName)
+        label(for="db-login") Login
+            input#db-login(type="text", name="db-login")
+        br
+        label(for="db-password") Password
+            input#db-password(type="text", name="db-password")
+        br
+        label(for="db-port") Port
+            input#db-port(type="text", name="db-port")
+        br
+        label(for="db-note") Note
+            input#db-note(type="text", name="db-note")
+        input(type="submit", value="UPD")    

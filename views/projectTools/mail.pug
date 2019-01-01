@@ -1,0 +1,31 @@
+if (project.types.mail != '')
+    h3 Mail
+    each mail in project.types.mail
+        form(action="changeProject", method="post")
+            input(type="hidden", name="type", value="mail")
+            input(type="hidden", name="authorName", value=project.authorName)
+            input(type="hidden", name="projectName", value=project.projectName)
+            label(for="mail-email") Email
+                input#mail-email(type="text", name="mail-email", value=mail.email)
+            br
+            label(for="mail-password") Password
+                input#mail-password(type="text", name="mail-password", value=mail.password)
+            br
+            label(for="mail-note") Note
+                input#mail-note(type="text", name="mail-note", value=mail.note)
+            input(type="submit", value="UPD")
+else
+    h3 Mail
+    form(action="changeProject", method="post")
+        input(type="hidden", name="type", value="mail")
+        input(type="hidden", name="authorName", value=project.authorName)
+        input(type="hidden", name="projectName", value=project.projectName)
+        label(for="mail-email") Email
+            input#mail-email(type="text", name="mail-email")
+        br
+        label(for="mail-password") Password
+            input#mail-password(type="text", name="mail-password")
+        br
+        label(for="mail-note") Note
+            input#mail-note(type="text", name="mail-note")
+        input(type="submit", value="UPD")    

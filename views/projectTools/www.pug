@@ -1,0 +1,37 @@
+if (project.types.www != '')
+    h3 www
+    each www in project.types.www
+        form(action="changeProject", method="post")
+            input(type="hidden", name="type", value="www")
+            input(type="hidden", name="authorName", value=project.authorName)
+            input(type="hidden", name="projectName", value=project.projectName)
+            label(for="www-login") Login
+                input#www-login(type="text", name="www-login", value=www.login)
+            br
+            label(for="www-password") Password
+                input#www-password(type="text", name="www-password", value=www.password)
+            br
+            label(for="www-address") address
+                input#www-address(type="text", name="www-address", value=www.address)
+            br
+            label(for="www-note") Note
+                input#www-note(type="text", name="www-note", value=www.note)
+            input(type="submit", value="UPD")
+else
+    h3 www
+    form(action="changeProject", method="post")
+        input(type="hidden", name="type", value="www")
+        input(type="hidden", name="authorName", value=project.authorName)
+        input(type="hidden", name="projectName", value=project.projectName)
+        label(for="www-login") Login
+            input#www-login(type="text", name="www-login")
+        br
+        label(for="www-password") Password
+            input#www-password(type="text", name="www-password")
+        br
+        label(for="www-address") address
+            input#www-address(type="text", name="www-address")
+        br
+        label(for="www-note") Note
+            input#www-note(type="text", name="www-note")
+        input(type="submit", value="UPD")    

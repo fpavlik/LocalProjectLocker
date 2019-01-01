@@ -18,13 +18,13 @@ var projectSchema = new Schema({
             {
                 login : String,
                 password : String,
-                port : Number,
+                port : String,
                 note : String
             }
         ],
         hosting : [
             {
-                addres : String,
+                address : String,
                 login : String,
                 password : String,
                 note : String,
@@ -39,7 +39,7 @@ var projectSchema = new Schema({
         ],
         www : [
             {
-                adress : String,
+                address : String,
                 login : String,
                 password : String,
                 note : String
